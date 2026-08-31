@@ -1,5 +1,35 @@
 #PRACTICE SHEET 01
 
+"""
+Q1
+
+Ek line input lo jisme 2 ya zyada words hon.
+
+Us line me:
+
+- total number of words print karo
+- longest word print karo
+- shortest word print karo
+
+Conditions:
+
+- "split()" use karna hai
+- "max()" aur "min()" direct use nahi karne
+- loop aur "len()" use karna hai
+
+Example Input
+
+I am learning Python fast
+
+Expected Output
+
+5
+learning
+I
+
+---
+
+
 #Q1
 
 text_line = input("Enter a text line: ").split()
