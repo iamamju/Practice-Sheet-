@@ -1,0 +1,24 @@
+#PRACTICE SHEET 01
+
+#Q1
+
+text_line = input("Enter a text line: ").split()
+
+l = len(text_line)
+
+longest = text_line[0]
+shortest = text_line[0]
+
+print("Total words =", l)
+
+for i in range(l):
+    if len(text_line[i]) > len(longest):
+        longest = text_line[i]
+
+    if len(text_line[i]) < len(shortest):
+        shortest = text_line[i]
+
+print("Longest =", longest)
+print("Shortest =", shortest)
+
+
