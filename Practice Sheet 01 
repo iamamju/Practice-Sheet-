@@ -27,10 +27,9 @@ Expected Output
 learning
 I
 
----
+---""" 
 
-
-#Q1
+#Solution👇
 
 text_line = input("Enter a text line: ").split()
 
@@ -50,5 +49,79 @@ for i in range(l):
 
 print("Longest =", longest)
 print("Shortest =", shortest)
+
+
+#Q2
+
+Ek string input lo.
+
+Us string ke:
+
+- vowels count karo
+- consonants count karo
+- spaces count karo
+
+Phir print karo:
+
+- "Vowels = X"
+- "Consonants = Y"
+- "Spaces = Z"
+
+Conditions:
+
+- lowercase/uppercase dono handle karne hain
+- spaces aur symbols consonant me count nahi hone chahiye
+
+Example Input
+
+Data Science is fun
+
+Expected Output
+
+Vowels = 6
+Consonants = 9
+Spaces = 3
+
+---"""
+
+#Solution👇
+
+string_line = input("enter a multiple string line :")
+
+
+l = len(string_line)
+
+vowels = 0
+consonants = 0
+spaces = 0
+symbols = 0
+numbers = 0
+
+
+vowel_list = "aeiouAEIOU"
+consonants_list = "bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ"
+
+number_list = "0123456789"
+_spaces_ = " "
+
+
+for ch in string_line:
+    if ch in consonants_list:
+        consonants += 1
+    elif ch in vowel_list:
+        vowels += 1
+    elif ch in _spaces_:
+        spaces += 1
+    elif ch in number_list:
+        numbers += 1
+    else:
+        symbols += 1
+
+print("vowels =" , vowels)
+print("consonants =" , consonants)
+print("spaces =" , spaces)
+print("numbers" , numbers)
+print("symbols =", symbols)
+                                                                    
 
 
