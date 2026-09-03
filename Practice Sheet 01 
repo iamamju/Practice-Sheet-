@@ -124,4 +124,51 @@ print("numbers" , numbers)
 print("symbols =", symbols)
                                                                     
 
+#Q3
+
+📝 Problem
+
+Take a string as input and:
+
+• Print only the alphabetic characters
+• Skip digits and symbols
+• Print the first alphabetic character
+• Print the last alphabetic character
+• Count the total alphabetic characters
+
+Condition:
+Use loops and comparisons — do not use "isalpha()".
+
+Example Input:
+
+"A1b@C9d!"
+
+Expected Output:
+
+"AbCd"
+"A"
+"d"
+"4"
+
+
+#Solution👇
+
+string = input("enter a string:")
+
+letter_lst = []
+count_letter = 0
+
+letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+for i in string:
+    if i in letters:
+        print(i, end="")
+        letter_lst.append(i)
+        count_letter += 1
+
+print()
+
+print(letter_lst[0])
+print(letter_lst[-1])
+print(count_letter)
 
