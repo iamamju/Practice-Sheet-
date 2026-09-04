@@ -172,3 +172,55 @@ print(letter_lst[0])
 print(letter_lst[-1])
 print(count_letter)
 
+
+📅 September 4, 2026
+
+🐍 Python Practice Sheet 01 — Q4
+
+Continuing my Python practice journey!
+
+📝 Problem
+
+Given a list of integers:
+
+• Find the sum of elements at even indexes
+• Find the sum of elements at odd indexes
+• Find the difference between the two sums
+
+Conditions:
+• Do not use "sum()" directly
+• Traverse the list using a loop
+
+Example Input:
+
+"[12, 23, 34, 13, 10, 29]"
+
+Expected Output:
+
+"56"
+"65"
+"9"
+
+
+💻 My Solution:
+
+int_lst = [12, 23, 34, 13, 10, 29]
+
+l = len(int_lst)
+
+sum_odd = 0
+sum_even = 0
+
+for i in range(l):
+    if i % 2 == 0:
+        sum_even += int_lst[i]
+    else:
+        sum_odd += int_lst[i]
+
+print(sum_even)
+print(sum_odd)
+
+if sum_odd > sum_even:
+    print(sum_odd - sum_even)
+else:
+    print(sum_even - sum_odd)
