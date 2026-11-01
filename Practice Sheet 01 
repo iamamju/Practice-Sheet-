@@ -27,31 +27,9 @@ Expected Output
 learning
 I
 
----""" 
+---
 
-#Solution👇
-
-text_line = input("Enter a text line: ").split()
-
-l = len(text_line)
-
-longest = text_line[0]
-shortest = text_line[0]
-
-print("Total words =", l)
-
-for i in range(l):
-    if len(text_line[i]) > len(longest):
-        longest = text_line[i]
-
-    if len(text_line[i]) < len(shortest):
-        shortest = text_line[i]
-
-print("Longest =", longest)
-print("Shortest =", shortest)
-
-
-#Q2
+Q2
 
 Ek string input lo.
 
@@ -82,9 +60,464 @@ Vowels = 6
 Consonants = 9
 Spaces = 3
 
----"""
+---
 
-#Solution👇
+Q3
+
+Ek string input lo.
+
+Usme sirf alphabetic characters ko alag se print karo aur digits/symbols skip karo.
+
+Phir alphabetic characters me se:
+
+- first character
+- last character
+- total alphabetic count
+
+print karo.
+
+Conditions:
+
+- "isalpha()" use nahi karna
+- loop + comparisons use karni hain
+
+Example Input
+
+A1b@C9d!
+
+Expected Output
+
+AbCd
+A
+d
+4
+
+---
+
+Q4
+
+Ek list input lo of integers.
+
+Us list me:
+
+- even index wale elements ka sum
+- odd index wale elements ka sum
+- dono sums ka difference
+
+print karo.
+
+Conditions:
+
+- direct "sum()" use nahi karna
+- list traversal loop se karni hai
+
+Example Input
+
+[12, 23, 34, 13, 10, 29]
+
+Expected Output
+
+56
+65
+9
+
+---
+
+Q5
+
+Ek list of integers input lo.
+
+Har element ko update karo:
+
+- even ho to "+5"
+- odd ho to "-3"
+
+Phir:
+
+- updated list print karo
+- highest updated value print karo
+- lowest updated value print karo
+- total updated values ka sum print karo
+
+Conditions:
+
+- "max()", "min()", "sum()" direct use nahi karne
+- updated list alag se banana hai
+
+Example Input
+
+[12, 14, 32, 10, 17, 37]
+
+Expected Output
+
+[17, 19, 37, 15, 14, 34]
+37
+14
+136
+
+---
+
+Q6
+
+Ek tuple input lo.
+
+Us tuple me:
+
+- total number of elements print karo
+- first element print karo
+- second last element print karo
+- tuple ko reverse order me print karo using loop
+
+Conditions:
+
+- tuple immutable hai, isliye update nahi karna
+- slicing reverse "[::-1]" use nahi karna
+
+Example Input
+
+(4, 9, 15, 2, 7)
+
+Expected Output
+
+5
+4
+2
+7 2 15 9 4
+
+---
+
+Q7
+
+Ek tuple of strings input lo.
+
+Us tuple me se:
+
+- jis word me "a" ya "A" ho, unhe print karo
+- har matching word ka first letter print karo
+- total matching words count karo
+
+Conditions:
+
+- loop use karna hai
+- "lower()" use kar sakte ho
+- direct built-in counting function use nahi karni
+
+Example Input
+
+("Apple", "Blue", "Mango", "Cat")
+
+Expected Output
+
+Apple
+Mango
+Cat
+A
+M
+C
+3
+
+---
+
+Q8
+
+Ek dictionary input lo jisme student ke subjects aur marks hon.
+
+Program:
+
+- 85 ya usse zyada marks wale subjects ka total nikale
+- highest marks find kare
+- kitne subjects pass hain (marks >= 33) wo count kare
+
+Conditions:
+
+- dictionary traversal use karni hai
+- "max()" direct use nahi karna
+
+Example Input
+
+{
+ "Math": 90,
+ "Science": 80,
+ "English": 95,
+ "Python": 32
+}
+
+Expected Output
+
+185
+95
+3
+
+---
+
+Q9
+
+Ek dictionary input lo.
+
+Usme:
+
+- ek naya key ""Total"" add karo
+- ""Total"" me sab values ka sum store karo
+- phir ""Total"" print karo
+- phir dictionary ke saare keys print karo
+
+Conditions:
+
+- loop use karna hai
+- direct "sum()" use nahi karna
+
+Example Input
+
+{
+ "Math": 90,
+ "Science": 80
+}
+
+Expected Output
+
+170
+Math
+Science
+Total
+
+---
+
+Q10
+
+Ek function banao "average(data)" jo list ka average "return" kare.
+
+User se list ke marks lo aur function call karke average print karo.
+
+Conditions:
+
+- "return" use karna hai
+- input function ke bahar lena hai
+- "sum()" direct use nahi karna
+
+Example Input
+
+[80, 90, 75]
+
+Expected Output
+
+81.66666666666667
+
+---
+
+Q11
+
+Ek function banao "largest_name(names)" jo list me se longest string "return" kare.
+
+Phir us longest string ko reverse order me print karo.
+
+Conditions:
+
+- function me list input use karo
+- reverse printing loop se karni hai
+- slicing use nahi karni
+
+Example Input
+
+["Amit", "Rahul", "Riya", "Neha"]
+
+Expected Output
+
+Rahul
+luhaR
+
+---
+
+Q12
+
+Ek function banao "count_even(numbers)" jo tuple/list me se even numbers ki count "return" kare.
+
+Phir same numbers me se:
+
+- even numbers ka product nikalo
+- odd numbers ka count nikalo
+
+Conditions:
+
+- loop use karna hai
+- built-in count nahi karni
+
+Example Input
+
+[2, 5, 8, 11, 14]
+
+Expected Output
+
+3
+224
+2
+
+---
+
+Q13
+
+Ek string input lo.
+
+Usme:
+
+- kitne characters vowels hain
+- kitne consonants hain
+- kitne characters repeat ho rahe hain
+
+Phir:
+
+- repeated characters ko dictionary me store karo
+- dictionary print karo
+
+Conditions:
+
+- string traversal use karni hai
+- dictionary logic use karna hai
+- spaces ignore karni hain
+
+Example Input
+
+mississippi
+
+Expected Output
+
+4
+7
+{'m': 1, 'i': 4, 's': 4, 'p': 2}
+
+---
+
+Q14
+
+Ek tuple of student data lo:
+
+- name
+- age
+- marks
+
+Function banao "check_result(student)" jo:
+
+- marks > 90 ho to ""A"" return kare
+- warna ""B"" return kare
+
+Phir:
+
+- student name print karo
+- grade print karo
+- age bhi print karo
+
+Conditions:
+
+- unpacking use karni hai
+- "return" use karna hai
+
+Example Input
+
+("Rahul", 22, 95)
+
+Expected Output
+
+Rahul
+A
+22
+
+---
+
+Q15
+
+Ek line input lo.
+
+Us line ko "split()" karke:
+
+- total words count karo
+- longest word print karo
+- shortest word print karo
+- phir sab words ko reverse order me print karo
+
+Conditions:
+
+- "split()" compulsory hai
+- "max()" aur "min()" direct use nahi karne
+- reverse order loop se karna hai
+
+Example Input
+
+Python is a powerful language
+
+Expected Output
+
+5
+powerful
+a
+language powerful a is Python
+
+---
+
+Q16
+
+Ek mini project-style function banao "student_summary(name, subjects, marks)".
+
+Ye function:
+
+- total marks nikaale
+- average nikaale
+- highest mark nikaale
+- lowest mark nikaale
+- pass/fail decide kare
+- grade return kare
+
+Conditions:
+
+- "subjects" list hoga
+- "marks" list hoga
+- "return" use karna hai
+- "sum()", "max()", "min()" direct use nahi karne
+
+Example Input
+
+name = "Amju"
+subjects = ["Math", "Python", "English", "Logic"]
+marks = [92, 85, 78, 88]
+
+Expected Output
+
+Amju
+343
+85.75
+92
+78
+Pass
+B
+
+---
+
+"""
+
+
+#Q1
+
+text_line = input("Enter a text line: ").split()
+
+l = len(text_line)
+
+longest = text_line[0]
+shortest = text_line[0]
+
+print("Total words =", l)
+
+for i in range(l):
+    if len(text_line[i]) > len(longest):
+        longest = text_line[i]
+
+    if len(text_line[i]) < len(shortest):
+        shortest = text_line[i]
+
+print("Longest =", longest)
+print("Shortest =", shortest)
+
+
+
+#Q2
+
 
 string_line = input("enter a multiple string line :")
 
@@ -122,105 +555,353 @@ print("consonants =" , consonants)
 print("spaces =" , spaces)
 print("numbers" , numbers)
 print("symbols =", symbols)
-                                                                    
-
+                                                                                                                           
 #Q3
 
-📝 Problem
-
-Take a string as input and:
-
-• Print only the alphabetic characters
-• Skip digits and symbols
-• Print the first alphabetic character
-• Print the last alphabetic character
-• Count the total alphabetic characters
-
-Condition:
-Use loops and comparisons — do not use "isalpha()".
-
-Example Input:
-
-"A1b@C9d!"
-
-Expected Output:
-
-"AbCd"
-"A"
-"d"
-"4"
-
-
-#Solution👇
 
 string = input("enter a string:")
 
-letter_lst = []
+
+letter_lst = [ ]
 count_letter = 0
 
 letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
+
 for i in string:
     if i in letters:
-        print(i, end="")
+        print(i , end ="")
         letter_lst.append(i)
         count_letter += 1
 
+
 print()
+
 
 print(letter_lst[0])
 print(letter_lst[-1])
 print(count_letter)
 
 
-📅 September 4, 2026
+#Q4
 
-🐍 Python Practice Sheet 01 — Q4
-
-Continuing my Python practice journey!
-
-📝 Problem
-
-Given a list of integers:
-
-• Find the sum of elements at even indexes
-• Find the sum of elements at odd indexes
-• Find the difference between the two sums
-
-Conditions:
-• Do not use "sum()" directly
-• Traverse the list using a loop
-
-Example Input:
-
-"[12, 23, 34, 13, 10, 29]"
-
-Expected Output:
-
-"56"
-"65"
-"9"
-
-
-💻 My Solution:
-
-int_lst = [12, 23, 34, 13, 10, 29]
+int_lst = [12, 23, 34, 13, 10, 29] 
 
 l = len(int_lst)
 
 sum_odd = 0
 sum_even = 0
-
 for i in range(l):
-    if i % 2 == 0:
+    if i % 2 == 0 :
         sum_even += int_lst[i]
     else:
         sum_odd += int_lst[i]
 
+
 print(sum_even)
 print(sum_odd)
+
 
 if sum_odd > sum_even:
     print(sum_odd - sum_even)
 else:
     print(sum_even - sum_odd)
+
+
+
+#Q5
+int_lst = [12, 14, 32, 10, 17, 37]
+
+upd_int_lst = []
+
+for elem in int_lst:
+    if elem % 2 == 0:
+        upd_int_lst.append(elem + 5)
+    else:
+        upd_int_lst.append(elem - 3)
+
+highest = upd_int_lst[0]
+lowest = upd_int_lst[0]
+total = 0
+
+for value in upd_int_lst:
+    if value > highest:
+        highest = value
+
+    if value < lowest:
+        lowest = value
+
+    total += value
+
+print(upd_int_lst)
+print("Highest =", highest)
+print("Lowest =", lowest)
+print("Total =", total)
+
+#Q6
+
+tup = (4, 9, 15, 2, 7)
+
+l = len(tup)
+
+print(l)
+print(tup[0])
+print(tup[-2])
+
+for i in range(l):
+    print(tup[l-(i+1)])
+
+
+#Q7
+
+tup = ("Apple", "Blue", "Mango", "Cat") 
+
+l = len(tup)
+count = 0
+for i in tup:
+    if "a" in i or "A" in i :
+        print(i)
+        count += 1
+
+for i in tup:   
+    if "a" in i or "A" in i :
+        print(i[0])
+        
+        
+print(count)
+
+
+
+#Q8
+
+dict_subs = { "Math": 90, "Science": 80, "English": 95, "Python": 32 } 
+
+sum_marks = 0
+highest_marks = dict_subs["Math"]
+count_pass = 0
+for i in dict_subs :
+    if dict_subs[i] >= 85:
+        sum_marks += dict_subs[i]
+    if dict_subs[i] > highest_marks:
+        highest_marks = dict_subs[i] 
+    if dict_subs[i] >= 33:
+        count_pass += 1
+        
+print(sum_marks)
+print(highest_marks)
+print(count_pass) 
+
+#Q9
+
+dict_subs = { "Math": 90, "Science": 80 } 
+Total = 0
+dict_subs["Total"] = Total
+
+for i in dict_subs:
+    Total += dict_subs[i] 
+    print(i)
+   
+   
+print(Total)
+
+
+
+#Q10
+def average(data):
+    total = 0
+
+    for marks in data:
+        total += marks
+
+    return total / len(data)
+
+
+marks_lst = []
+
+subjects = int(input("Enter number of subjects: "))
+
+for i in range(subjects):
+    marks = int(input(f"Enter marks {i+1}: "))
+    marks_lst.append(marks)
+
+result = average(marks_lst)
+
+print("Average =", result)
+
+
+#Q11
+
+def largest_name(names) :
+    name_lst = [ ]
+    
+    for i in range(names):
+        name = input("enter name:")
+        name_lst.append(name)
+        
+    l = len(name_lst)
+    largest = name_lst[0]
+        
+    for j in range(l):
+        if len(name_lst[j]) > len(largest):
+            largest = name_lst[j]
+    print(largest)
+        
+    for k in range(len(largest)):    
+        print(largest[len(largest) - k - 1] , end = "")
+        
+    
+
+largest_name(4) 
+
+
+
+#Q12
+
+def count_even(numbers):
+    num_lst = [ ]
+    count_odd = 0
+    count_even = 0
+    prdct = 1
+
+    for i in range(n):
+        num = int(input(f"enter num {i+1}"))
+        num_lst.append(num)
+    
+    for j in num_lst:
+        if j % 2 == 0:
+            count_even += 1
+            prdct *= j
+            
+        else:
+            count_odd += 1
+
+    print(count_even)
+    print(prdct)
+    print(count_odd)
+
+n = int(input("enter len of num"))
+count_even(n)
+
+
+#Q13
+
+
+word = input("enter word:")
+count_vowels = 0 
+count_consonants = 0
+
+for i in word:
+    if i in "aeiouAEIOU":
+        count_vowels += 1
+    else:
+        count_consonants += 1
+        
+
+print(count_vowels)
+print(count_consonants)
+    
+    
+        
+count_letter = { }        
+for i in word:
+    if i in count_letter:
+        count_letter[i] += 1
+    else:
+        count_letter[i] = 1
+
+print(count_letter)
+
+#Q14
+
+student_info = ("Rahul", 22, 95) 
+
+name , age , marks = student_info
+
+if marks > 90:
+    print(name)
+    print("A")
+    print(age)
+else:
+    print(name)
+    print("B")
+    print(age)
+
+
+
+#Q15
+
+
+sentence = input("enter a sentence:").split()
+
+count_word = 0 
+largest = sentence[0]
+shortest = sentence[0]
+
+for i in sentence:
+    if i in sentence:
+        count_word += 1
+    
+    if len(i) > len(largest):
+        largest = i
+    elif len(i) < len(shortest):
+        shortest = i
+        
+        
+print(count_word)
+print(largest)
+print(shortest)
+
+l = len(sentence)
+
+for j in range(l):
+    print(sentence[l-j-1])
+
+
+
+#Q16
+
+
+def student_summary(name, subjects, marks):
+    sub_lst = [ ]
+    marks_lst = [ ]
+    total = 0 
+    
+    
+    for i in range(subjects):
+        sub = input(f"enter subject name {i+1}:")
+        sub_lst.append(sub)
+    for j in sub_lst:
+        marks = int(input(f"enter {j} marks "))
+        marks_lst.append(marks)
+        
+    for mark in marks_lst:
+        total += mark
+        
+    highest = marks_lst[0]
+    lowest = marks_lst[0]
+    
+    for mark in marks_lst:
+        if mark > highest:
+            highest = mark
+        elif mark < lowest:
+            lowest = mark
+    
+    average = total / len(marks_lst)
+    
+    print(name)
+    print(total)
+    print(average)
+    print(highest)
+    print(lowest)
+    if lowest >= 33:
+        print("Pass")
+    else:
+        print("Fail")   
+    
+
+n = int(input("enter sub len:"))
+
+student_summary("Amju", n, n)
+
+
+
