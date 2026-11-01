@@ -1,0 +1,495 @@
+#PRACTICE SHEET 01
+
+"""
+
+Q1
+
+Ek line input lo jisme 2 ya zyada words hon.
+
+Us line me:
+
+- total number of words print karo
+- longest word print karo
+- shortest word print karo
+
+Conditions:
+
+- "split()" use karna hai
+- "max()" aur "min()" direct use nahi karne
+- loop aur "len()" use karna hai
+
+Example Input
+
+I am learning Python fast
+
+Expected Output
+
+5
+learning
+I
+
+---
+
+
+Q2
+
+Ek string input lo.
+
+Us string ke:
+
+- vowels count karo
+- consonants count karo
+- spaces count karo
+
+Phir print karo:
+
+- "Vowels = X"
+- "Consonants = Y"
+- "Spaces = Z"
+
+Conditions:
+
+- lowercase/uppercase dono handle karne hain
+- spaces aur symbols consonant me count nahi hone chahiye
+
+Example Input
+
+Data Science is fun
+
+Expected Output
+
+Vowels = 6
+Consonants = 9
+Spaces = 3
+
+---
+
+Q3
+
+Ek string input lo.
+
+Usme sirf alphabetic characters ko alag se print karo aur digits/symbols skip karo.
+
+Phir alphabetic characters me se:
+
+- first character
+- last character
+- total alphabetic count
+
+print karo.
+
+Conditions:
+
+- "isalpha()" use nahi karna
+- loop + comparisons use karni hain
+
+Example Input
+
+A1b@C9d!
+
+Expected Output
+
+AbCd
+A
+d
+4
+
+---
+
+Q4
+
+Ek list input lo of integers.
+
+Us list me:
+
+- even index wale elements ka sum
+- odd index wale elements ka sum
+- dono sums ka difference
+
+print karo.
+
+Conditions:
+
+- direct "sum()" use nahi karna
+- list traversal loop se karni hai
+
+Example Input
+
+[12, 23, 34, 13, 10, 29]
+
+Expected Output
+
+56
+65
+9
+
+---
+
+Q5
+
+Ek list of integers input lo.
+
+Har element ko update karo:
+
+- even ho to "+5"
+- odd ho to "-3"
+
+Phir:
+
+- updated list print karo
+- highest updated value print karo
+- lowest updated value print karo
+- total updated values ka sum print karo
+
+Conditions:
+
+- "max()", "min()", "sum()" direct use nahi karne
+- updated list alag se banana hai
+
+Example Input
+
+[12, 14, 32, 10, 17, 37]
+
+Expected Output
+
+[17, 19, 37, 15, 14, 34]
+37
+14
+136
+
+---
+
+Q6
+
+Ek tuple input lo.
+
+Us tuple me:
+
+- total number of elements print karo
+- first element print karo
+- second last element print karo
+- tuple ko reverse order me print karo using loop
+
+Conditions:
+
+- tuple immutable hai, isliye update nahi karna
+- slicing reverse "[::-1]" use nahi karna
+
+Example Input
+
+(4, 9, 15, 2, 7)
+
+Expected Output
+
+5
+4
+2
+7 2 15 9 4
+
+---
+
+Q7
+
+Ek tuple of strings input lo.
+
+Us tuple me se:
+
+- jis word me "a" ya "A" ho, unhe print karo
+- har matching word ka first letter print karo
+- total matching words count karo
+
+Conditions:
+
+- loop use karna hai
+- "lower()" use kar sakte ho
+- direct built-in counting function use nahi karni
+
+Example Input
+
+("Apple", "Blue", "Mango", "Cat")
+
+Expected Output
+
+Apple
+Mango
+Cat
+A
+M
+C
+3
+
+---
+
+Q8
+
+Ek dictionary input lo jisme student ke subjects aur marks hon.
+
+Program:
+
+- 85 ya usse zyada marks wale subjects ka total nikale
+- highest marks find kare
+- kitne subjects pass hain (marks >= 33) wo count kare
+
+Conditions:
+
+- dictionary traversal use karni hai
+- "max()" direct use nahi karna
+
+Example Input
+
+{
+ "Math": 90,
+ "Science": 80,
+ "English": 95,
+ "Python": 32
+}
+
+Expected Output
+
+185
+95
+3
+
+---
+
+Q9
+
+Ek dictionary input lo.
+
+Usme:
+
+- ek naya key ""Total"" add karo
+- ""Total"" me sab values ka sum store karo
+- phir ""Total"" print karo
+- phir dictionary ke saare keys print karo
+
+Conditions:
+
+- loop use karna hai
+- direct "sum()" use nahi karna
+
+Example Input
+
+{
+ "Math": 90,
+ "Science": 80
+}
+
+Expected Output
+
+170
+Math
+Science
+Total
+
+---
+
+Q10
+
+Ek function banao "average(data)" jo list ka average "return" kare.
+
+User se list ke marks lo aur function call karke average print karo.
+
+Conditions:
+
+- "return" use karna hai
+- input function ke bahar lena hai
+- "sum()" direct use nahi karna
+
+Example Input
+
+[80, 90, 75]
+
+Expected Output
+
+81.66666666666667
+
+---
+
+Q11
+
+Ek function banao "largest_name(names)" jo list me se longest string "return" kare.
+
+Phir us longest string ko reverse order me print karo.
+
+Conditions:
+
+- function me list input use karo
+- reverse printing loop se karni hai
+- slicing use nahi karni
+
+Example Input
+
+["Amit", "Rahul", "Riya", "Neha"]
+
+Expected Output
+
+Rahul
+luhaR
+
+---
+
+Q12
+
+Ek function banao "count_even(numbers)" jo tuple/list me se even numbers ki count "return" kare.
+
+Phir same numbers me se:
+
+- even numbers ka product nikalo
+- odd numbers ka count nikalo
+
+Conditions:
+
+- loop use karna hai
+- built-in count nahi karni
+
+Example Input
+
+[2, 5, 8, 11, 14]
+
+Expected Output
+
+3
+224
+2
+
+---
+
+Q13
+
+Ek string input lo.
+
+Usme:
+
+- kitne characters vowels hain
+- kitne consonants hain
+- kitne characters repeat ho rahe hain
+
+Phir:
+
+- repeated characters ko dictionary me store karo
+- dictionary print karo
+
+Conditions:
+
+- string traversal use karni hai
+- dictionary logic use karna hai
+- spaces ignore karni hain
+
+Example Input
+
+mississippi
+
+Expected Output
+
+4
+7
+{'m': 1, 'i': 4, 's': 4, 'p': 2}
+
+---
+
+Q14
+
+Ek tuple of student data lo:
+
+- name
+- age
+- marks
+
+Function banao "check_result(student)" jo:
+
+- marks > 90 ho to ""A"" return kare
+- warna ""B"" return kare
+
+Phir:
+
+- student name print karo
+- grade print karo
+- age bhi print karo
+
+Conditions:
+
+- unpacking use karni hai
+- "return" use karna hai
+
+Example Input
+
+("Rahul", 22, 95)
+
+Expected Output
+
+Rahul
+A
+22
+
+---
+
+Q15
+
+Ek line input lo.
+
+Us line ko "split()" karke:
+
+- total words count karo
+- longest word print karo
+- shortest word print karo
+- phir sab words ko reverse order me print karo
+
+Conditions:
+
+- "split()" compulsory hai
+- "max()" aur "min()" direct use nahi karne
+- reverse order loop se karna hai
+
+Example Input
+
+Python is a powerful language
+
+Expected Output
+
+5
+powerful
+a
+language powerful a is Python
+
+---
+
+Q16
+
+Ek mini project-style function banao "student_summary(name, subjects, marks)".
+
+Ye function:
+
+- total marks nikaale
+- average nikaale
+- highest mark nikaale
+- lowest mark nikaale
+- pass/fail decide kare
+- grade return kare
+
+Conditions:
+
+- "subjects" list hoga
+- "marks" list hoga
+- "return" use karna hai
+- "sum()", "max()", "min()" direct use nahi karne
+
+Example Input
+
+name = "Amju"
+subjects = ["Math", "Python", "English", "Logic"]
+marks = [92, 85, 78, 88]
+
+Expected Output
+
+Amju
+343
+85.75
+92
+78
+Pass
+B
+
+---
+
+"""
