@@ -1,0 +1,430 @@
+#Q1
+
+text_line = input("Enter a text line: ").split()
+
+l = len(text_line)
+
+longest = text_line[0]
+shortest = text_line[0]
+
+print("Total words =", l)
+
+for i in range(l):
+    if len(text_line[i]) > len(longest):
+        longest = text_line[i]
+
+    if len(text_line[i]) < len(shortest):
+        shortest = text_line[i]
+
+print("Longest =", longest)
+print("Shortest =", shortest)
+
+
+
+#Q2
+
+
+string_line = input("enter a multiple string line :")
+
+
+l = len(string_line)
+
+vowels = 0
+consonants = 0
+spaces = 0
+symbols = 0
+numbers = 0
+
+
+vowel_list = "aeiouAEIOU"
+consonants_list = "bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ"
+
+number_list = "0123456789"
+_spaces_ = " "
+
+
+for ch in string_line:
+    if ch in consonants_list:
+        consonants += 1
+    elif ch in vowel_list:
+        vowels += 1
+    elif ch in _spaces_:
+        spaces += 1
+    elif ch in number_list:
+        numbers += 1
+    else:
+        symbols += 1
+
+print("vowels =" , vowels)
+print("consonants =" , consonants)
+print("spaces =" , spaces)
+print("numbers" , numbers)
+print("symbols =", symbols)
+                             
+
+                                                                                              
+#Q3
+
+
+string = input("enter a string:")
+
+
+letter_lst = [ ]
+count_letter = 0
+
+letters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+
+
+for i in string:
+    if i in letters:
+        print(i , end ="")
+        letter_lst.append(i)
+        count_letter += 1
+
+
+print()
+
+
+print(letter_lst[0])
+print(letter_lst[-1])
+print(count_letter)
+
+
+
+
+#Q4
+
+int_lst = [12, 23, 34, 13, 10, 29] 
+
+l = len(int_lst)
+
+sum_odd = 0
+sum_even = 0
+for i in range(l):
+    if i % 2 == 0 :
+        sum_even += int_lst[i]
+    else:
+        sum_odd += int_lst[i]
+
+
+print(sum_even)
+print(sum_odd)
+
+
+if sum_odd > sum_even:
+    print(sum_odd - sum_even)
+else:
+    print(sum_even - sum_odd)
+
+
+
+
+
+#Q5
+int_lst = [12, 14, 32, 10, 17, 37]
+
+upd_int_lst = []
+
+for elem in int_lst:
+    if elem % 2 == 0:
+        upd_int_lst.append(elem + 5)
+    else:
+        upd_int_lst.append(elem - 3)
+
+highest = upd_int_lst[0]
+lowest = upd_int_lst[0]
+total = 0
+
+for value in upd_int_lst:
+    if value > highest:
+        highest = value
+
+    if value < lowest:
+        lowest = value
+
+    total += value
+
+print(upd_int_lst)
+print("Highest =", highest)
+print("Lowest =", lowest)
+print("Total =", total)
+
+
+
+
+#Q6
+
+tup = (4, 9, 15, 2, 7)
+
+l = len(tup)
+
+print(l)
+print(tup[0])
+print(tup[-2])
+
+for i in range(l):
+    print(tup[l-(i+1)])
+
+
+#Q7
+
+tup = ("Apple", "Blue", "Mango", "Cat") 
+
+l = len(tup)
+count = 0
+for i in tup:
+    if "a" in i or "A" in i :
+        print(i)
+        count += 1
+
+for i in tup:   
+    if "a" in i or "A" in i :
+        print(i[0])
+        
+        
+print(count)
+
+
+
+#Q8
+
+dict_subs = { "Math": 90, "Science": 80, "English": 95, "Python": 32 } 
+
+sum_marks = 0
+highest_marks = dict_subs["Math"]
+count_pass = 0
+for i in dict_subs :
+    if dict_subs[i] >= 85:
+        sum_marks += dict_subs[i]
+    if dict_subs[i] > highest_marks:
+        highest_marks = dict_subs[i] 
+    if dict_subs[i] >= 33:
+        count_pass += 1
+        
+print(sum_marks)
+print(highest_marks)
+print(count_pass) 
+
+
+
+
+#Q9
+
+dict_subs = { "Math": 90, "Science": 80 } 
+Total = 0
+dict_subs["Total"] = Total
+
+for i in dict_subs:
+    Total += dict_subs[i] 
+    print(i)
+   
+   
+print(Total)
+
+
+
+
+
+#Q10
+def average(data):
+    total = 0
+
+    for marks in data:
+        total += marks
+
+    return total / len(data)
+
+
+marks_lst = []
+
+subjects = int(input("Enter number of subjects: "))
+
+for i in range(subjects):
+    marks = int(input(f"Enter marks {i+1}: "))
+    marks_lst.append(marks)
+
+result = average(marks_lst)
+
+print("Average =", result)
+
+
+
+
+#Q11
+
+def largest_name(names) :
+    name_lst = [ ]
+    
+    for i in range(names):
+        name = input("enter name:")
+        name_lst.append(name)
+        
+    l = len(name_lst)
+    largest = name_lst[0]
+        
+    for j in range(l):
+        if len(name_lst[j]) > len(largest):
+            largest = name_lst[j]
+    print(largest)
+        
+    for k in range(len(largest)):    
+        print(largest[len(largest) - k - 1] , end = "")
+        
+    
+
+largest_name(4) 
+
+
+
+
+
+#Q12
+
+def count_even(numbers):
+    num_lst = [ ]
+    count_odd = 0
+    count_even = 0
+    prdct = 1
+
+    for i in range(n):
+        num = int(input(f"enter num {i+1}"))
+        num_lst.append(num)
+    
+    for j in num_lst:
+        if j % 2 == 0:
+            count_even += 1
+            prdct *= j
+            
+        else:
+            count_odd += 1
+
+    print(count_even)
+    print(prdct)
+    print(count_odd)
+
+n = int(input("enter len of num"))
+count_even(n)
+
+
+#Q13
+
+
+word = input("enter word:")
+count_vowels = 0 
+count_consonants = 0
+
+for i in word:
+    if i in "aeiouAEIOU":
+        count_vowels += 1
+    else:
+        count_consonants += 1
+        
+
+print(count_vowels)
+print(count_consonants)
+    
+    
+        
+count_letter = { }        
+for i in word:
+    if i in count_letter:
+        count_letter[i] += 1
+    else:
+        count_letter[i] = 1
+
+print(count_letter)
+
+#Q14
+
+student_info = ("Rahul", 22, 95) 
+
+name , age , marks = student_info
+
+if marks > 90:
+    print(name)
+    print("A")
+    print(age)
+else:
+    print(name)
+    print("B")
+    print(age)
+
+
+
+#Q15
+
+
+sentence = input("enter a sentence:").split()
+
+count_word = 0 
+largest = sentence[0]
+shortest = sentence[0]
+
+for i in sentence:
+    if i in sentence:
+        count_word += 1
+    
+    if len(i) > len(largest):
+        largest = i
+    elif len(i) < len(shortest):
+        shortest = i
+        
+        
+print(count_word)
+print(largest)
+print(shortest)
+
+l = len(sentence)
+
+for j in range(l):
+    print(sentence[l-j-1])
+
+
+
+#Q16
+
+
+def student_summary(name, subjects, marks):
+    sub_lst = [ ]
+    marks_lst = [ ]
+    total = 0 
+    
+    
+    for i in range(subjects):
+        sub = input(f"enter subject name {i+1}:")
+        sub_lst.append(sub)
+    for j in sub_lst:
+        marks = int(input(f"enter {j} marks "))
+        marks_lst.append(marks)
+        
+    for mark in marks_lst:
+        total += mark
+        
+    highest = marks_lst[0]
+    lowest = marks_lst[0]
+    
+    for mark in marks_lst:
+        if mark > highest:
+            highest = mark
+        elif mark < lowest:
+            lowest = mark
+    
+    average = total / len(marks_lst)
+    
+    print(name)
+    print(total)
+    print(average)
+    print(highest)
+    print(lowest)
+    if lowest >= 33:
+        print("Pass")
+    else:
+        print("Fail")   
+    
+
+n = int(input("enter sub len:"))
+
+student_summary("Amju", n, n)
+
+
+
